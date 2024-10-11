@@ -2,13 +2,12 @@ package com.example.LocationsBack.Entity;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 
 @Entity
 @Table(name = "client")
@@ -18,9 +17,11 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Client {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
     private Long id;
 
-    @JsonProperty("nom")
+    @JsonProperty("name")
     private String name;
 
     @JsonProperty("lastName")

@@ -58,6 +58,7 @@ public class ClientServiceImpl implements ClientService {
             existeClient.setBirthday(client.getBirthday());
             existeClient.setEmail(client.getEmail());
             existeClient.setPhone(client.getPhone());
+            return clientRepository.save(existeClient);
         }
         return client;
     }
