@@ -35,4 +35,6 @@ public class Client {
 
     @JsonProperty("phone")
     private String phone;
+
 }
+
