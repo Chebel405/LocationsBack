@@ -18,6 +18,8 @@ public interface VehiculeService {
 
     List<Vehicule> findByEtat(Vehicule.EtatVehicule etatVehicule);
 
+    List<Vehicule> findByDisponibilite(Vehicule.Disponibilite disponibilite);
+
     Vehicule save(Vehicule vehicule);
 
     void deleteById(Long id);

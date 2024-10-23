@@ -48,6 +48,11 @@ public class VehiculeServiceImpl implements VehiculeService {
     }
 
     @Override
+    public List<Vehicule> findByDisponibilite(Vehicule.Disponibilite disponibilite) {
+        return vehiculeRepository.findByDisponibilite(disponibilite);
+    }
+
+    @Override
     public Vehicule save(Vehicule vehicule) {
         return vehiculeRepository.save(vehicule);
     }

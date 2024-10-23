@@ -11,4 +11,5 @@ import java.util.List;
 public interface VehiculeRepository extends JpaRepository<Vehicule, Long> {
     List<Vehicule> findByTypeVehicule(Vehicule.TypeVehicule typeVehicule);
     List<Vehicule> findByEtatVehicule(Vehicule.EtatVehicule etatVehicule);
+    List<Vehicule> findByDisponibilite(Vehicule.Disponibilite disponibilite);
 }

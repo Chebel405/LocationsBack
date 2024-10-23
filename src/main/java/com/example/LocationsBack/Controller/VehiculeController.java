@@ -34,9 +34,14 @@ public class VehiculeController {
         return vehiculeService.findByType(typeVehicule);
     }
 
-    @GetMapping("etat/{etatVehicule}")
+    @GetMapping("/etat/{etatVehicule}")
     public List<Vehicule> findByEtat(@PathVariable Vehicule.EtatVehicule etatVehicule){
         return vehiculeService.findByEtat(etatVehicule);
+    }
+
+    @GetMapping("/disponibilite/{disponibilite}")
+    public List<Vehicule> findByDisponibilite(@PathVariable Vehicule.Disponibilite disponibilite){
+        return vehiculeService.findByDisponibilite(disponibilite);
     }
 
     @PostMapping("/")
